@@ -167,14 +167,14 @@ nav .nav-navBar-sociaux ul li img {
   opacity: 0;
 }
 
-main {
+.about {
   overflow: hidden;
   width: 100%;
   height: 800px;
   background: orange;
 }
 
-.about {
+.about-container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -183,7 +183,7 @@ main {
   width: 100%;
   height: 95%;
 }
-.about .about-left {
+.about-container .about-left {
   width: 40%;
   height: 60%;
   margin-right: 10px;
@@ -191,7 +191,7 @@ main {
   box-shadow: -5px 5px 15px 5px black;
   border-radius: 20px;
 }
-.about .about-top {
+.about-container .about-top {
   position: absolute;
   top: 50px;
   left: 50%;
@@ -202,12 +202,12 @@ main {
   border-radius: 45px;
   filter: drop-shadow(0 0 20px green);
 }
-.about .about-top h3 {
+.about-container .about-top h3 {
   text-align: center;
   text-transform: uppercase;
   padding: 60px 0;
 }
-.about .about-top h3:after {
+.about-container .about-top h3:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -217,7 +217,7 @@ main {
   transform: translateX(-50%);
   background: grey;
 }
-.about .about-top p {
+.about-container .about-top p {
   letter-spacing: 2px;
   line-height: 30px;
   font-size: 1.1rem;
@@ -225,7 +225,7 @@ main {
   text-align: center;
   padding: 15px;
 }
-.about .about-right {
+.about-container .about-right {
   width: 40%;
   height: 60%;
   margin-left: 10px;
