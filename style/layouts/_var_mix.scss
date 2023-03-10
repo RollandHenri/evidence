@@ -27,11 +27,9 @@ $colorpink: rgba(122, 21, 21, 0.5);
 
 @keyframes titleanim {
   from {
-    transform: translateY(100%);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
