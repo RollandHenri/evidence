@@ -232,4 +232,47 @@ nav .nav-navBar-sociaux ul li img {
   background: url("/img/sepabkgd.jpg") center/cover;
   box-shadow: 5px 5px 15px 5px black;
   border-radius: 20px;
+}
+
+.prestation {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+.prestation h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px;
+}
+.prestation h2:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: grey;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prestation-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+}
+.prestation-container .massage {
+  width: 150px;
+  height: 150px;
+  background: red;
+}
+.prestation-container .energetique {
+  width: 150px;
+  height: 150px;
+  background: red;
+}
+.prestation-container .boncadeux {
+  width: 150px;
+  height: 150px;
+  background: red;
 }/*# sourceMappingURL=style.css.map */

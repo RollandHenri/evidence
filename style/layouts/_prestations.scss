@@ -1,0 +1,42 @@
+.prestation {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  & h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background: grey;
+      top: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.prestation-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+  & .massage {
+    width: 150px;
+    height: 150px;
+    background: red;
+  }
+  & .energetique {
+    width: 150px;
+    height: 150px;
+    background: red;
+  }
+  & .boncadeux {
+    width: 150px;
+    height: 150px;
+    background: red;
+  }
+}
