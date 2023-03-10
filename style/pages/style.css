@@ -44,9 +44,18 @@ body {
 }
 
 .separateur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 300px;
   background: url("../../img/sepabkgd.jpg") center/cover fixed;
+}
+.separateur .separateur-container {
+  width: 80%;
+  height: 75%;
+  background: rgba(255, 255, 255, 0.411);
+  border-radius: 40px;
 }
 
 header {
