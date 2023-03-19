@@ -1,33 +1,11 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
-  overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 1600px;
   margin: 0 auto;
-  width: 100%;
-  height: auto;
-  scroll-behavior: smooth;
-}
-
-.separateur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 300px;
-  background: url("../../img/sepabkgd.jpg") center/cover fixed;
-  & .separateur-container {
-    width: 80%;
-    height: 75%;
-    background: rgba(255, 255, 255, 0.411);
-    border-radius: 40px;
-  }
 }

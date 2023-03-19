@@ -1,282 +1,89 @@
-/**** variables  ****/
-/**** KayFrames ****/
-@keyframes blackbkgd {
+/*** KeyFrames ***/
+@keyframes logoBounce {
   from {
-    opacity: 1;
+    transform: translateY(0);
   }
   to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes navbar {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes titleanim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    transform: translateY(-5px);
   }
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
-  overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 1600px;
   margin: 0 auto;
-  width: 100%;
-  height: auto;
-  scroll-behavior: smooth;
-}
-
-.separateur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 300px;
-  background: url("../../img/sepabkgd.jpg") center/cover fixed;
-}
-.separateur .separateur-container {
-  width: 80%;
-  height: 75%;
-  background: rgba(255, 255, 255, 0.411);
-  border-radius: 40px;
 }
 
 header {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: url(/img/headerBkgd.jpg) center/cover fixed;
-}
-header::before {
-  content: "";
-  position: absolute;
+  width: auto;
   height: 100vh;
-  width: 100%;
-  background: rgb(255, 255, 255);
-  animation: blackbkgd 3.5s ease-in-out forwards;
-}
-header h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-  font-size: 3rem;
-  opacity: 0;
-  animation: titleanim 1s ease-in-out forwards;
-  animation-delay: 3s;
+  background: url("/img/headerBkgd.jpg") center/cover;
 }
 
 nav {
-  position: fixed;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  height: 80px;
   width: 100%;
-  height: 90px;
-  background: rgba(128, 128, 128, 0.507);
-  animation: navbar 4s ease forwards;
-  transition: 1s ease;
-  z-index: 50;
-  overflow-y: hidden;
+  background: rgba(128, 128, 128, 0.445);
 }
-nav .nav-logo {
+nav .navbar-menu {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  width: 5%;
-  margin: 0 20px;
-  transition: 0.5s ease;
+  justify-content: space-between;
+  height: 100%;
+  width: 85%;
 }
-nav .nav-logo img {
-  width: 60px;
-  height: 60px;
+nav .navbar-menu #logo-navbar img {
+  width: 75px;
+  height: 75px;
+  filter: drop-shadow(2px 2px 10px whitesmoke);
 }
-nav .nav-navBar-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
+nav .navbar-menu #logo-navbar img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
-nav .nav-navBar-nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-nav .nav-navBar-nav ul li {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 600;
+nav .navbar-menu li {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  margin: 0 40px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-nav .nav-navBar-nav ul li:hover {
-  transition: 0.7s ease-out;
-  color: white;
-  text-shadow: 2px 2px 2px grey;
-  font-style: italic;
+nav .navbar-menu li:hover {
+  color: whitesmoke;
 }
-nav .nav-navBar-sociaux {
+nav .navbar-sociaux {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 20%;
-}
-nav .nav-navBar-sociaux ul {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 100%;
+  width: 15%;
+  height: 100%;
 }
-nav .nav-navBar-sociaux ul li img {
+nav .navbar-sociaux li img {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
-
-.navBar-js {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 45px;
-  background: rgba(122, 21, 21, 0.5);
-  overflow-y: hidden;
-}
-.navBar-js .nav-logo {
-  transition: 0.5s ease;
-  opacity: 0;
+nav .navbar-sociaux li img:hover {
+  animation: logoBounce 0.5s forwards;
+  transition: 0.8s ease-out;
 }
 
-.about {
-  overflow: hidden;
-  width: 100%;
-  height: 800px;
-  background: orange;
-}
-
-.about-container {
-  position: relative;
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  width: 100%;
-  height: 95%;
+  height: 100%;
 }
-.about-container .about-left {
-  width: 40%;
-  height: 60%;
-  margin-right: 10px;
-  background: url("/img/sepabkgd.jpg") center/cover;
-  box-shadow: -5px 5px 15px 5px black;
-  border-radius: 20px;
-}
-.about-container .about-top {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px;
-  height: 55%;
-  background: red;
-  border-radius: 45px;
-  filter: drop-shadow(0 0 20px green);
-}
-.about-container .about-top h3 {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 60px 0;
-}
-.about-container .about-top h3:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: grey;
-}
-.about-container .about-top p {
-  letter-spacing: 2px;
-  line-height: 30px;
-  font-size: 1.1rem;
-  font-weight: 550;
-  text-align: center;
-  padding: 15px;
-}
-.about-container .about-right {
-  width: 40%;
-  height: 60%;
-  margin-left: 10px;
-  background: url("/img/sepabkgd.jpg") center/cover;
-  box-shadow: 5px 5px 15px 5px black;
-  border-radius: 20px;
-}
-
-.prestation {
-  position: relative;
-  width: 100%;
-  height: 800px;
-}
-.prestation h2 {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 40px;
-}
-
-.container {
-  padding-top: 30px;
-  position: relative;
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.container .card {
-  position: relative;
-  cursor: pointer;
-}
-
-.container .card .face {
-  width: 200px;
-  height: 200px;
-  transition: 0.5s ease;
-}
-
-.container .card .face.face1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: red;
-  z-index: 1;
-  transform: translateY(100px);
-}
-
-.container .card:hover .face.face1 {
-  background: pink;
-  transform: translateY(0);
+.title h1 {
+  color: whitesmoke;
+  font-size: 4rem;
+  font-family: sans-serif;
 }/*# sourceMappingURL=style.css.map */

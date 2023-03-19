@@ -1,26 +1,68 @@
 header {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: url(/img/headerBkgd.jpg) center/cover fixed;
+  width: auto;
+  height: 100vh;
+  background: url("/img/headerBkgd.jpg") center/cover;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    animation: blackbkgd 3.5s ease-in-out forwards;
-  }
-  & h1 {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  background: rgba(128, 128, 128, 0.445);
+  & .navbar-menu {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: $colorwhite;
-    font-size: 3rem;
-    opacity: 0;
-    animation: titleanim 1s ease-in-out forwards;
-    animation-delay: 3s;
+    justify-content: space-between;
+    height: 100%;
+    width: 85%;
+    & #logo-navbar img {
+      width: 75px;
+      height: 75px;
+      filter: drop-shadow(2px 2px 10px whitesmoke);
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+      }
+    }
+    & li {
+      font-size: 1.5rem;
+      font-family: sans-serif;
+      margin: 0 40px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        color: whitesmoke;
+      }
+    }
+  }
+  & .navbar-sociaux {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    height: 100%;
+    & li img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        animation: logoBounce 0.5s forwards;
+        transition: 0.8s ease-out;
+      }
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  & h1 {
+    color: whitesmoke;
+    font-size: 4rem;
+    font-family: sans-serif;
   }
 }
