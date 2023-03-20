@@ -1,3 +1,13 @@
+/**** Font ****/
+@font-face {
+  font-family: "";
+  src: "";
+}
+@font-face {
+  font-family: "";
+  src: "";
+}
+/**** Variable Colors ****/
 /*** KeyFrames ***/
 @keyframes logoBounce {
   from {
@@ -89,69 +99,74 @@ nav .navbar-sociaux li img:hover {
 }
 
 .mission-section-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: start;
   height: 100%;
   width: 100%;
 }
+.mission-section-container::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 75%;
+  border-radius: 20px;
+  filter: drop-shadow(1px 1px 10px black);
+  background: url("/img/mission-pic.jpg") center/cover;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  z-index: 3;
+}
 .mission-section-container .container-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 30%;
+  width: 57%;
   height: 100%;
-  margin: 0 25px;
+  margin: 0 40px;
+  padding-left: 40px;
 }
 .mission-section-container .container-text h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   letter-spacing: 1px;
   padding: 20px 0;
 }
 .mission-section-container .container-text p {
-  text-align: center;
+  text-align: left;
   max-width: 50%;
   font-size: 1.2rem;
+  font-weight: 550;
   letter-spacing: 1px;
+  line-height: 30px;
 }
 .mission-section-container .container-picture {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 35%;
+  width: 57%;
   height: 100%;
+  background: url("/img/bkgd-mission-right.jpg") center/cover;
 }
-.mission-section-container .container-picture:after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  background: red;
-  top: 0;
-}
-.mission-section-container .container-picture .mission-picture {
-  width: 100%;
-  height: 40%;
-  border-radius: 25px;
-  background: url("/img/mission-pic.jpg") center/cover;
-  z-index: 2;
+.mission-section-container .container-picture p {
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 0 10px;
+  writing-mode: vertical-rl;
+  color: white;
 }
 .mission-section-container .container-textVer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 30%;
+  width: 6%;
   height: 100%;
-  writing-mode: vertical-rl;
-}
-.mission-section-container .container-textVer p {
-  transform: rotate(180deg);
-  letter-spacing: 2px;
-  font-size: 1rem;
-  font-family: sans-serif;
 }
 
 .separateur-citations {
@@ -172,8 +187,115 @@ nav .navbar-sociaux li img:hover {
 .prestations-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 800px;
+  height: 1000px;
+}
+.prestations-section .prestations-title {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prestations-section .prestations-title::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1px;
+  background: grey;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container .card-container-bloc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 10px;
+  min-width: 80%;
+  width: 100%;
+  height: 250px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.card .card__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  border-radius: 40px;
+  background: red;
+  z-index: 2;
+  transition: 1s ease-in-out;
+}
+.card .card__top button {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+.card .card__bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 100%;
+  border-radius: 40px;
+  background: green;
+  opacity: 0.8;
+  transition: 1s ease-in-out;
+}
+.card .card__bottom p {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 35px;
+  font-weight: 550;
+  opacity: 0;
+  transition: 1s;
+}
+
+.container-textVer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 4%;
+  height: 100%;
+}
+.container-textVer p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 0 10px;
+  writing-mode: vertical-rl;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
