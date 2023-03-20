@@ -1,0 +1,70 @@
+.mission-section {
+  height: 500px;
+  background: url("/img/bkgd-mission.jpg") center/cover;
+}
+
+.mission-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  width: 100%;
+  & .container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 25px;
+    & h2 {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      padding: 20px 0;
+    }
+    & p {
+      text-align: center;
+      max-width: 50%;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+  }
+  & .container-picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background: red;
+      top: 0;
+    }
+    & .mission-picture {
+      width: 100%;
+      height: 40%;
+      border-radius: 25px;
+      background: url("/img/mission-pic.jpg") center/cover;
+      z-index: 2;
+    }
+  }
+  & .container-textVer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30%;
+    height: 100%;
+    writing-mode: vertical-rl;
+    & p {
+      transform: rotate(180deg);
+      letter-spacing: 2px;
+      font-size: 1rem;
+      font-family: sans-serif;
+    }
+  }
+}

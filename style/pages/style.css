@@ -14,11 +14,6 @@
   list-style: none;
 }
 
-body {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
 header {
   width: auto;
   height: 100vh;
@@ -86,4 +81,99 @@ nav .navbar-sociaux li img:hover {
   color: whitesmoke;
   font-size: 4rem;
   font-family: sans-serif;
+}
+
+.mission-section {
+  height: 500px;
+  background: url("/img/bkgd-mission.jpg") center/cover;
+}
+
+.mission-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  width: 100%;
+}
+.mission-section-container .container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin: 0 25px;
+}
+.mission-section-container .container-text h2 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 20px 0;
+}
+.mission-section-container .container-text p {
+  text-align: center;
+  max-width: 50%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.mission-section-container .container-picture {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+.mission-section-container .container-picture:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: red;
+  top: 0;
+}
+.mission-section-container .container-picture .mission-picture {
+  width: 100%;
+  height: 40%;
+  border-radius: 25px;
+  background: url("/img/mission-pic.jpg") center/cover;
+  z-index: 2;
+}
+.mission-section-container .container-textVer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  height: 100%;
+  writing-mode: vertical-rl;
+}
+.mission-section-container .container-textVer p {
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.separateur-citations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background: green;
+}
+.separateur-citations span {
+  width: 70%;
+  height: 150px;
+  background: white;
+  text-align: center;
+}
+
+.prestations-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 800px;
 }/*# sourceMappingURL=style.css.map */

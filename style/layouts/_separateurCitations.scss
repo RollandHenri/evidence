@@ -1,0 +1,14 @@
+.separateur-citations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background: green;
+  & span {
+    width: 70%;
+    height: 150px;
+    background: white;
+    text-align: center;
+  }
+}
