@@ -1,89 +1,94 @@
-/**** variables *****/
+const cardMassage = document.querySelector(".card-massage");
+const cardHollitique = document.querySelector(".card-hollitique");
+const cardCadeau = document.querySelector(".card-cadeau");
 
-const cardLeftMassage = document.querySelector(".card__top__massage");
-const cardRightMassage = document.querySelector(".card__bottom__massage");
-const cardRightMassageP = document.querySelector(".card__bottom__massage__p");
-const cardLeftMassageBtn = document.querySelector(".btn__massage");
+const cardMassageHidden = document.querySelector(".card-massage-hidden");
+const cardMassageFace = document.querySelector(".card-massage-visible");
 
-const cardLeftHollitique = document.querySelector(".card__top__hollitique");
-const cardRightHollitique = document.querySelector(".card__bottom__hollitique");
-const cardRightHollitiqueP = document.querySelector(
-  ".card__bottom__hollitique__p"
-);
-const cardLeftHollitiqueBtn = document.querySelector(".btn__hollitique");
+const cardHollitiqueHidden = document.querySelector(".card-hollitique-hidden");
+const cardHollitiqueFace = document.querySelector(".card-hollitique-visible");
 
-const cardLeftCadeau = document.querySelector(".card__top__cadeau");
-const cardRightCadeau = document.querySelector(".card__bottom__cadeau");
-const cardRightCadeauP = document.querySelector(".card__bottom__cadeau__p");
-const cardLeftCadeauBtn = document.querySelector(".btn__cadeau");
+const cardCadeauHidden = document.querySelector(".card-cadeau-hidden");
+const cardCadeauFace = document.querySelector(".card-cadeau-visible");
 
-/**** Event ****/
+console.log(cardMassage);
 
-cardLeftMassage.addEventListener("mouseenter", () => {
-  cardLeftMassage.style.transform = "translateX(-200%)";
-  cardRightMassage.style.width = "60%";
-  cardRightMassage.style.transform = "translateX(-30%)";
-  cardRightMassageP.style.opacity = 1;
-  cardRightMassageP.style.transitionDelay = "1s";
-  cardLeftMassageBtn.style.opacity = 1;
-  /*** reverse ****/
-  cardLeftHollitique.style.transform = "translateX(0%)";
-  cardRightHollitique.style.width = "0%";
-  cardRightHollitique.style.transform = "translateX(0%)";
-  cardRightHollitiqueP.style.opacity = 0;
-  cardRightHollitiqueP.style.transition = "0.3s ease";
-  cardLeftHollitiqueBtn.style.opacity = 0;
-  /*** reverse ***/
-  cardLeftCadeau.style.transform = "translateX(0%)";
-  cardRightCadeau.style.width = "0%";
-  cardRightCadeau.style.transform = "translate(0%)";
-  cardRightCadeauP.style.opacity = 0;
-  cardRightCadeauP.style.transition = "0.3s ease";
-  cardLeftCadeauBtn.style.opacity = 0;
+console.log(cardMassageHidden);
+
+/*** Event ***/
+
+/******* Card Massage ******/
+cardMassage.addEventListener("mouseenter", () => {
+  cardMassageHidden.classList.replace(
+    "card-massage-hidden",
+    "card-massage-hidden-anim"
+  );
+
+  cardMassageFace.classList.replace(
+    "card-massage-visible",
+    "card-massage-visible-anim"
+  );
 });
 
-cardLeftHollitique.addEventListener("mouseenter", () => {
-  cardLeftHollitique.style.transform = "translateX(-200%)";
-  cardRightHollitique.style.width = "60%";
-  cardRightHollitique.style.transform = "translateX(-30%)";
-  cardRightHollitiqueP.style.opacity = 1;
-  cardRightHollitiqueP.style.transitionDelay = "1s";
-  cardLeftHollitiqueBtn.style.opacity = 1;
-  /*** reverse ****/
-  cardLeftMassage.style.transform = "translateX(0%)";
-  cardRightMassage.style.width = "0%";
-  cardRightMassage.style.transform = "translateX(0%)";
-  cardRightMassageP.style.opacity = 0;
-  cardRightMassageP.style.transition = "0.3s ease";
-  cardLeftMassageBtn.style.opacity = 0;
-  /*** reverse ****/
-  cardLeftCadeau.style.transform = "translateX(0%)";
-  cardRightCadeau.style.width = "0%";
-  cardRightCadeau.style.transform = "translateX(0%)";
-  cardRightCadeauP.style.opacity = 0;
-  cardRightCadeauP.style.transition = "0.3s ease";
-  cardLeftCadeauBtn.style.opacity = 0;
+cardMassage.addEventListener("mouseleave", () => {
+  cardMassageHidden.classList.replace(
+    "card-massage-hidden-anim",
+    "card-massage-hidden"
+  );
+
+  cardMassageFace.classList.replace(
+    "card-massage-visible-anim",
+    "card-massage-visible"
+  );
 });
 
-cardLeftCadeau.addEventListener("mouseenter", () => {
-  cardLeftCadeau.style.transform = "translateX(-200%)";
-  cardRightCadeau.style.width = "60%";
-  cardRightCadeau.style.transform = "translateX(-30%)";
-  cardRightCadeauP.style.opacity = 1;
-  cardRightCadeauP.style.transitionDelay = "1s";
-  cardLeftCadeauBtn.style.opacity = 1;
-  /*** reverse ****/
-  cardLeftHollitique.style.transform = "translateX(0%)";
-  cardRightHollitique.style.width = "0%";
-  cardRightHollitique.style.transform = "translateX(0%)";
-  cardRightHollitiqueP.style.opacity = 0;
-  cardRightHollitiqueP.style.transition = "0.3s ease";
-  cardLeftHollitiqueBtn.style.opacity = 0;
-  /*** reverse ****/
-  cardLeftMassage.style.transform = "translateX(0%)";
-  cardRightMassage.style.width = "0%";
-  cardRightMassage.style.transform = "translateX(0%)";
-  cardRightMassageP.style.opacity = 0;
-  cardRightMassageP.style.transition = "0.3s ease";
-  cardLeftMassageBtn.style.opacity = 0;
+/****** Card Hollitique  ******/
+
+cardHollitique.addEventListener("mouseenter", () => {
+  cardHollitiqueHidden.classList.replace(
+    "card-hollitique-hidden",
+    "card-hollitique-hidden-anim"
+  );
+
+  cardHollitiqueFace.classList.replace(
+    "card-hollitique-visible",
+    "card-hollitique-visible-anim"
+  );
+});
+
+cardHollitique.addEventListener("mouseleave", () => {
+  cardHollitiqueHidden.classList.replace(
+    "card-hollitique-hidden-anim",
+    "card-hollitique-hidden"
+  );
+
+  cardHollitiqueFace.classList.replace(
+    "card-hollitique-visible-anim",
+    "card-hollitique-visible"
+  );
+});
+
+/******** Card Cadeau *******/
+
+cardCadeau.addEventListener("mouseenter", () => {
+  cardCadeauHidden.classList.replace(
+    "card-cadeau-hidden",
+    "card-cadeau-hidden-anim"
+  );
+
+  cardCadeauFace.classList.replace(
+    "card-cadeau-visible",
+    "card-cadeau-visible-anim"
+  );
+});
+
+cardCadeau.addEventListener("mouseleave", () => {
+  cardCadeauHidden.classList.replace(
+    "card-cadeau-hidden-anim",
+    "card-cadeau-hidden"
+  );
+  cardCadeauFace.classList.replace(
+    "card-cadeau-visible-anim",
+    "card-cadeau-visible"
+  );
 });

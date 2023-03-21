@@ -190,7 +190,7 @@ nav .navbar-sociaux li img:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 1000px;
+  height: 700px;
 }
 .prestations-section .prestations-title {
   position: relative;
@@ -212,70 +212,118 @@ nav .navbar-sociaux li img:hover {
 }
 
 .card-container {
-  width: 100%;
-  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.card-container .card-container-bloc {
   width: 100%;
   height: 100%;
+}
+.card-container .card-container-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 96%;
+  height: 100%;
+}
+
+.card__all {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-height: 800px;
+}
+.card__all .card-massage-visible,
+.card__all .card-hollitique-visible,
+.card__all .card-cadeau-visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  background: url("/img/mission-pic.jpg") center/cover;
+  filter: drop-shadow(2px 2px 20px black);
+  transition: 1.5s ease-in-out;
+  transition-delay: 1s;
+}
+.card__all .card-massage-visible .card-massage-face,
+.card__all .card-massage-visible .card-hollitique-face,
+.card__all .card-massage-visible .card-cadeau-face,
+.card__all .card-hollitique-visible .card-massage-face,
+.card__all .card-hollitique-visible .card-hollitique-face,
+.card__all .card-hollitique-visible .card-cadeau-face,
+.card__all .card-cadeau-visible .card-massage-face,
+.card__all .card-cadeau-visible .card-hollitique-face,
+.card__all .card-cadeau-visible .card-cadeau-face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card__all .card-massage-visible .card-massage-face h3,
+.card__all .card-massage-visible .card-hollitique-face h3,
+.card__all .card-massage-visible .card-cadeau-face h3,
+.card__all .card-hollitique-visible .card-massage-face h3,
+.card__all .card-hollitique-visible .card-hollitique-face h3,
+.card__all .card-hollitique-visible .card-cadeau-face h3,
+.card__all .card-cadeau-visible .card-massage-face h3,
+.card__all .card-cadeau-visible .card-hollitique-face h3,
+.card__all .card-cadeau-visible .card-cadeau-face h3 {
+  width: 100%;
+  height: 20%;
+  margin: 70% auto auto auto;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.card__all .card-massage-hidden,
+.card__all .card-hollitique-hidden,
+.card__all .card-cadeau-hidden {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-width: 400px;
+  height: 400px;
+  background: grey;
+  border-radius: 100%;
+  opacity: 0;
+  transition: 1.5s ease-in-out;
+}
+.card__all .card-massage-hidden .card-massage-revel,
+.card__all .card-massage-hidden .card-hollitique-revel,
+.card__all .card-massage-hidden .card-cadeau-revel,
+.card__all .card-hollitique-hidden .card-massage-revel,
+.card__all .card-hollitique-hidden .card-hollitique-revel,
+.card__all .card-hollitique-hidden .card-cadeau-revel,
+.card__all .card-cadeau-hidden .card-massage-revel,
+.card__all .card-cadeau-hidden .card-hollitique-revel,
+.card__all .card-cadeau-hidden .card-cadeau-revel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px 10px;
-  min-width: 80%;
-  width: 100%;
-  height: 250px;
-  border-radius: 40px;
-  overflow: hidden;
-}
-.card .card__top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 100%;
-  border-radius: 40px;
-  background: red;
-  z-index: 2;
-  transition: 1s ease-in-out;
-}
-.card .card__top button {
+.card__all .card-massage-hidden .card-massage-revel p,
+.card__all .card-massage-hidden .card-hollitique-revel p,
+.card__all .card-massage-hidden .card-cadeau-revel p,
+.card__all .card-hollitique-hidden .card-massage-revel p,
+.card__all .card-hollitique-hidden .card-hollitique-revel p,
+.card__all .card-hollitique-hidden .card-cadeau-revel p,
+.card__all .card-cadeau-hidden .card-massage-revel p,
+.card__all .card-cadeau-hidden .card-hollitique-revel p,
+.card__all .card-cadeau-hidden .card-cadeau-revel p {
+  height: 80%;
   opacity: 0;
-  transition: 1s ease-in-out;
-}
-.card .card__bottom {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 100%;
-  border-radius: 40px;
-  background: green;
-  opacity: 0.8;
-  transition: 1s ease-in-out;
-}
-.card .card__bottom p {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 10px;
-  line-height: 35px;
-  font-weight: 550;
-  opacity: 0;
-  transition: 1s;
+  padding: 25px;
 }
 
 .container-textVer {
@@ -298,4 +346,79 @@ nav .navbar-sociaux li img:hover {
   margin: 0 10px;
   writing-mode: vertical-rl;
   color: black;
+}
+
+/**** JS Evenet Style ****/
+.card-massage-visible-anim,
+.card-hollitique-visible-anim,
+.card-cadeau-visible-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background: url("/img/mission-pic.jpg") center/cover;
+  transition: 1.5s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+}
+.card-massage-visible-anim h3,
+.card-hollitique-visible-anim h3,
+.card-cadeau-visible-anim h3 {
+  width: 100%;
+  height: 20%;
+  margin: 70% auto auto auto;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.card-massage-hidden-anim,
+.card-hollitique-hidden-anim,
+.card-cadeau-hidden-anim {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 300px;
+  background: grey;
+  opacity: 1;
+  transition: 1.5s ease;
+}
+.card-massage-hidden-anim .card-massage-revel,
+.card-massage-hidden-anim .card-hollitique-revel,
+.card-massage-hidden-anim .card-cadeau-revel,
+.card-hollitique-hidden-anim .card-massage-revel,
+.card-hollitique-hidden-anim .card-hollitique-revel,
+.card-hollitique-hidden-anim .card-cadeau-revel,
+.card-cadeau-hidden-anim .card-massage-revel,
+.card-cadeau-hidden-anim .card-hollitique-revel,
+.card-cadeau-hidden-anim .card-cadeau-revel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-massage-hidden-anim .card-massage-revel p,
+.card-massage-hidden-anim .card-hollitique-revel p,
+.card-massage-hidden-anim .card-cadeau-revel p,
+.card-hollitique-hidden-anim .card-massage-revel p,
+.card-hollitique-hidden-anim .card-hollitique-revel p,
+.card-hollitique-hidden-anim .card-cadeau-revel p,
+.card-cadeau-hidden-anim .card-massage-revel p,
+.card-cadeau-hidden-anim .card-hollitique-revel p,
+.card-cadeau-hidden-anim .card-cadeau-revel p {
+  height: 80%;
+  width: 80%;
+  background: white;
+  transition: 2s ease;
+  transition-delay: 1.7s;
+  opacity: 1;
+  text-align: center;
+  padding: 25px;
 }/*# sourceMappingURL=style.css.map */
