@@ -1,14 +1,29 @@
-.separateur-citations {
+.separateur {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
   width: 100%;
   background: green;
-  & span {
+  & .carrousel,
+  .carrousel-avis {
+    height: 80%;
     width: 70%;
-    height: 150px;
-    background: white;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.589);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+}
+
+.slider div,
+.slider-avis div {
+  max-width: 100%;
+  display: none;
+}
+
+div.active,
+div.avis-active {
+  display: block;
+  animation: fade 0.8s ease;
 }

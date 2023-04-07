@@ -1,3 +1,5 @@
+/**** Variables Services ****/
+
 const cardMassage = document.querySelector(".card-massage");
 const cardHollitique = document.querySelector(".card-hollitique");
 const cardCadeau = document.querySelector(".card-cadeau");
@@ -11,11 +13,53 @@ const cardHollitiqueFace = document.querySelector(".card-hollitique-visible");
 const cardCadeauHidden = document.querySelector(".card-cadeau-hidden");
 const cardCadeauFace = document.querySelector(".card-cadeau-visible");
 
-console.log(cardMassage);
+/**** Variables Carrousel Citations****/
 
-console.log(cardMassageHidden);
+const item = document.querySelectorAll(".item");
+const itemSlide = item.length;
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+let count = 0;
 
-/*** Event ***/
+/**** Variables Carrousel Avis Google *****/
+
+const avis = document.querySelectorAll(".avis");
+const avisSlide = avis.length;
+const leftAvis = document.querySelector(".avis-left");
+const rightAvis = document.querySelector(".avis-right");
+let countAvis = 0;
+
+/****** Function Carrousel Citations ******/
+
+function slideNext() {
+  item[count].classList.remove("active");
+
+  if (count < itemSlide - 1) {
+    count++;
+  } else {
+    count = 0;
+  }
+
+  item[count].classList.add("active");
+}
+
+setInterval(slideNext, 2000);
+
+/***** Function Carrousel Avis Google *****/
+
+function slideAvisNext() {
+  avis[countAvis].classList.remove("avis-active");
+
+  if (count < avisSlide - 1) {
+    countAvis++;
+  } else {
+    countAvis = 0;
+  }
+
+  avis[countAvis].classList.add("avis-active");
+}
+
+setInterval(slideAvisNext, 2000);
 
 /******* Card Massage ******/
 cardMassage.addEventListener("mouseenter", () => {
@@ -92,3 +136,5 @@ cardCadeau.addEventListener("mouseleave", () => {
     "card-cadeau-visible"
   );
 });
+
+/**** Event ****/

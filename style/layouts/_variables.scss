@@ -27,3 +27,12 @@ $color4: pink;
     transform: translateY(-5px);
   }
 }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
