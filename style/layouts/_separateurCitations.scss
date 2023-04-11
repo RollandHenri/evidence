@@ -1,15 +1,36 @@
 .separateur {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 300px;
   width: 100%;
-  background: green;
+  background: $color4;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    background: $color4;
+    filter: blur(5px);
+    width: 101%;
+    height: 40px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    background: $color4;
+    filter: blur(5px);
+    width: 101%;
+    height: 40px;
+    z-index: 50;
+  }
   & .carrousel,
   .carrousel-avis {
-    height: 80%;
+    height: 65%;
     width: 70%;
-    background: rgba(255, 255, 255, 0.589);
+    background: $color1;
+    border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;

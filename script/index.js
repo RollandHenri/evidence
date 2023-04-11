@@ -59,7 +59,7 @@ function slideAvisNext() {
   avis[countAvis].classList.add("avis-active");
 }
 
-setInterval(slideAvisNext, 2000);
+setInterval(slideAvisNext, 3000);
 
 /******* Card Massage ******/
 cardMassage.addEventListener("mouseenter", () => {

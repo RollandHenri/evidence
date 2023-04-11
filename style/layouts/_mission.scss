@@ -1,5 +1,5 @@
 .mission-section {
-  height: 500px;
+  height: 650px;
   background: url("/img/bkgd-mission.jpg") center/cover;
 }
 
@@ -14,10 +14,10 @@
     content: "";
     position: absolute;
     width: 25%;
-    height: 75%;
-    border-radius: 20px;
+    height: 450px;
+    border-radius: 30%;
     filter: drop-shadow(1px 1px 10px black);
-    background: url("/img/mission-pic.jpg") center/cover;
+    background: url("/img/profilpic.jpg") center/cover;
     object-fit: cover;
     top: 50%;
     left: 50%;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 57%;
+    width: 100%;
     height: 100%;
     margin: 0 40px;
     padding-left: 40px;
@@ -47,29 +47,19 @@
       line-height: 30px;
     }
   }
-  & .container-picture {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 57%;
-    height: 100%;
-    background: url("/img/bkgd-mission-right.jpg") center/cover;
-    & p {
-      transform: rotate(180deg);
-      letter-spacing: 2px;
-      font-size: 1rem;
-      font-family: sans-serif;
-      margin: 0 10px;
-      writing-mode: vertical-rl;
-      color: white;
-    }
-  }
-  & .container-textVer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 6%;
-    height: 100%;
-  }
+}
+
+.vertical-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 0 10px;
+  writing-mode: vertical-rl;
+  color: black;
 }

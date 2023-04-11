@@ -33,7 +33,8 @@ nav {
       cursor: pointer;
       transition: 0.5s ease-in-out;
       &:hover {
-        color: whitesmoke;
+        color: $color3;
+        filter: drop-shadow(2px 2px 5px white);
       }
     }
   }
