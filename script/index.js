@@ -1,3 +1,14 @@
+/**** Variables NavBar ****/
+
+const navBar = document.querySelector(".navbar");
+
+/**** Variable Scroll ****/
+
+const containerText = document.querySelector(".container-text");
+
+const prestationContainer = document.querySelector(".card-container-left");
+console.log(prestationContainer);
+
 /**** Variables Services ****/
 
 const cardMassage = document.querySelector(".card-massage");
@@ -50,7 +61,7 @@ setInterval(slideNext, 2000);
 function slideAvisNext() {
   avis[countAvis].classList.remove("avis-active");
 
-  if (count < avisSlide - 1) {
+  if (countAvis < avisSlide - 1) {
     countAvis++;
   } else {
     countAvis = 0;
@@ -138,3 +149,32 @@ cardCadeau.addEventListener("mouseleave", () => {
 });
 
 /**** Event ****/
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    navBar.classList.add("navbar-anim");
+  } else {
+    navBar.classList.remove("navbar-anim");
+  }
+});
+
+/************/
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      //console.log(entry.target, entry.isIntersecting);
+      if (entry.isIntersecting) {
+        entry.target.style.transform = "translateX(0px)";
+        entry.target.style.transform = "translateY(0px)";
+        entry.target.style.opacity = 1;
+      }
+    }
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
+observer.observe(containerText);
+observer.observe(prestationContainer);

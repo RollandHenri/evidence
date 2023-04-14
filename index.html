@@ -10,16 +10,16 @@
   <body>
     <!-- Header en 100vh -->
 
-    <header>
+    <header id="accueil">
       <nav class="navbar">
         <ul class="navbar-menu">
           <li id="logo-navbar">
             <img src="/img/logo.png" alt="logo Comme une évidence" />
           </li>
-          <li>Accueil</li>
-          <li>Préstations</li>
-          <li>A propos de moi</li>
-          <li>Contact</li>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#about">A propos de moi</a></li>
+          <li><a href="#prestations">Préstations </a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
 
         <ul class="navbar-sociaux">
@@ -40,7 +40,7 @@
 
     <!-- Mission -->
 
-    <section class="mission-section">
+    <section class="mission-section" id="about">
       <div class="mission-section-container">
         <div class="container-text">
           <h2>Ma Mission</h2>
@@ -70,7 +70,7 @@
 
     <!-- Prestations -->
 
-    <section class="prestations-section">
+    <section class="prestations-section" id="prestations">
       <div class="prestations-title">
         <h2>Choose your Aventure</h2>
       </div>
@@ -78,7 +78,7 @@
       <div class="card-container">
         <div class="card-container-left">
           <!-- Card Massage -->
-          <div class="card__all card-massage">
+          <div class="card-all card-massage">
             <div class="card-massage-visible">
               <div class="card-massage-face">
                 <h3>Massage</h3>
@@ -88,20 +88,22 @@
             <div class="card-massage-hidden">
               <div class="card-massage-revel">
                 <p class="para">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-                  quos magni ipsam assumenda natus cum, porro mollitia,
-                  quibusdam consequuntur iure quisquam ipsum enim, dicta
-                  recusandae dolores provident doloribus. Quidem inventore illum
-                  possimus vitae consectetur voluptatem tempore. Animi tempora
-                  aut, non quia quidem excepturi quasi illum consequatur
-                  corrupti laudantium soluta quisquam amet libero quis, quam
-                  eligendi est odio laborum facere culpa?
+                  Le toucher est un formidable vercteur de bien être, longtemps
+                  passé aux oubliettes dans notre société, il est pourtant l'un
+                  des sens les plus essentiels. Il stimule les récépteurs de la
+                  peau qui influent sur le systéme nerveux et favorise la
+                  production d'endorphines, de dopamines et de sérotonines.
+                  Celles-ci ont un effet anxiolytiques et permettent de diminuer
+                  la perception d'une douleur, le stress, l'anxiété et
+                  d'améliorer le fonctionnement du systéme immunitaire. <br />
+
+                  <a href="https://rollandhenri.github.io">En savoir plus</a>
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="card__all card-hollitique">
+          <div class="card-all card-hollitique">
             <div class="card-hollitique-visible">
               <div class="card-hollitique-face">
                 <h3>Soins Hollitique</h3>
@@ -111,20 +113,21 @@
             <div class="card-hollitique-hidden">
               <div class="card-hollitique-revel">
                 <p class="para">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-                  quos magni ipsam assumenda natus cum, porro mollitia,
-                  quibusdam consequuntur iure quisquam ipsum enim, dicta
-                  recusandae dolores provident doloribus. Quidem inventore illum
-                  possimus vitae consectetur voluptatem tempore. Animi tempora
-                  aut, non quia quidem excepturi quasi illum consequatur
-                  corrupti laudantium soluta quisquam amet libero quis, quam
-                  eligendi est odio laborum facere culpa?<br />
+                  Ré-harmoniser, ré-aligner le corps, l'âme et l'esprit en
+                  liberant la fatigue, le stress, les insomnies et de possible
+                  blocages émotionnels, traumatismes, croyances limitantes,
+                  héritages transgénérationnels, karma, ... Le soin énergétique
+                  permet donc de mettre en lumière les blessures, les failles
+                  afin de les guérir. Cela mettra aussi en évidence que tu es le
+                  créateur de ta propre vie et que tu peux dès à présent faire
+                  le choix de t'offrir le meilleur. <br />
+                  <a href="https://rollandhenri.github.io/">En savoir plus</a>
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="card__all card-cadeau">
+          <div class="card-all card-cadeau">
             <div class="card-cadeau-visible">
               <div class="card-cadeau-face">
                 <h3>Bon Cadeau</h3>
@@ -192,7 +195,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
       <ul class="footer-ref">
         <li>Politique de confidentialité</li>
         <li>Contact moi</li>
