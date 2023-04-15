@@ -54,7 +54,7 @@ function slideNext() {
   item[count].classList.add("active");
 }
 
-setInterval(slideNext, 2000);
+setInterval(slideNext, 5000);
 
 /***** Function Carrousel Avis Google *****/
 
