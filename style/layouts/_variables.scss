@@ -22,7 +22,7 @@ $color4: #ab7c72;
 @keyframes headerLoading {
   from {
     opacity: 100%;
-    z-index: 10;
+    z-index: 100;
   }
   to {
     z-index: -1;
