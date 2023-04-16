@@ -384,8 +384,8 @@ nav .navbar-sociaux li img:hover {
 @media screen and (max-width: 970px) {
   .mission-section-container .container-pic {
     width: 200px;
-    height: 275px;
-    transform: translate(60%, 60%);
+    height: 250px;
+    transform: translate(60%, 70%);
   }
 }
 
@@ -747,7 +747,7 @@ div.avis-active {
   font-display: swap;
   margin: 0 10px;
   writing-mode: vertical-rl;
-  color: black;
+  color: white;
 }
 
 /**** JS Evenet Style ****/

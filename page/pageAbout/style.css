@@ -35,7 +35,7 @@ header:before {
     width: 100%;
     background: white;
     top: 0;
-    animation: headerLoading 1s ease-in forwards;
+    animation: headerLoading 3s ease-in-out forwards;
 }
 
 header .logo-menu {
@@ -241,7 +241,7 @@ header .logo-menu img {
      }
 
      .about {
-        height: 1800px;
+        height: 1900px;
      }
 
    

@@ -101,8 +101,8 @@
     transition: 1.2s ease-in-out;
     @include tablette {
       width: 200px;
-      height: 275px;
-      transform: translate(60%, 60%);
+      height: 250px;
+      transform: translate(60%, 70%);
     }
   }
 }
