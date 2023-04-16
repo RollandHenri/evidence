@@ -91,11 +91,11 @@
   }
   & .container-pic {
     position: absolute;
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 500px;
     top: 50%;
     right: 30%;
-    transform: translate(40%, -45%);
+    transform: translate(60%, -45%);
     background: url(/img/profilpic.jpg) center/cover;
     opacity: 0;
     transition: 1.2s ease-in-out;
