@@ -1,83 +1,111 @@
 .mission-section {
-  height: 650px;
-  background: url("/img/bkgd-mission.jpg") center/cover;
+  height: 800px;
+  width: 100%;
+  background: url("/img/bkgd-mission.png") center/cover no-repeat;
+  background-position: right;
   @include tablette {
-    height: 1000px;
+    height: 800px;
   }
 }
 
 .mission-section-container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
   height: 100%;
   width: 100%;
   @include tablette {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: auto;
   }
   & .container-text {
+    width: 50%;
+    height: 80%;
+    background: $color5;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 50%;
-    max-width: 700px;
-    height: 350px;
-    margin: 80px 0 0 100px;
-    padding: 20px 40px;
-    border-radius: 40px;
-    background: #7a81876c;
-    transform: translateX(-100px);
-    opacity: 0;
-    transition: 1.2s ease;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 150px;
+
     @include tablette {
+      padding: 0;
+      width: 60%;
+    }
+    & .container-text-content {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: auto;
-      width: 70%;
-      margin: 50px auto;
-      padding: 15px;
-    }
-    & h2 {
-      text-align: left;
-      font-size: 2rem;
-      letter-spacing: 1px;
-      padding: 20px 0;
-      @media screen and (max-width: 790px) {
-        font-size: 1.3rem;
+      width: 100%;
+      height: 60%;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: 0.8s ease;
+      & h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 80px 0;
+        font-size: 1.8rem;
+        @include tablette {
+          font-size: 1.2rem;
+          margin-top: 30px;
+          margin-bottom: 10px;
+          width: 100%;
+        }
       }
-    }
-    & p {
-      text-align: left;
-      max-width: 70%;
-      font-size: 1.2rem;
-      font-weight: 550;
-      letter-spacing: 1px;
-      line-height: 30px;
-      @media screen and (max-width: 790px) {
-        font-size: 1rem;
+      & p {
+        width: 350px;
+        height: 500px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 45px;
+        color: white;
+        @include tablette {
+          width: 70%;
+          padding-top: 20px;
+          font-size: 0.8rem;
+          line-height: 25px;
+        }
+      }
+      & a {
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        height: auto;
+        color: $color1;
+        font-family: tanPearl;
+        @include tablette {
+          margin: 0;
+          padding: 40px 0;
+        }
       }
     }
   }
   & .container-pic {
-    width: 40%;
-    max-width: 550px;
-    height: 350px;
-    min-height: 200px;
-    border-radius: 40px;
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    top: 50%;
+    right: 30%;
+    transform: translate(40%, -45%);
     background: url(/img/profilpic.jpg) center/cover;
-    transform: translate(-30%, 50%);
+    opacity: 0;
+    transition: 1.2s ease-in-out;
     @include tablette {
-      width: 70%;
-      margin: 0 auto;
-      transform: translate(0, 0);
+      width: 200px;
+      height: 275px;
+      transform: translate(60%, 60%);
     }
   }
 }
-
 .vertical-text {
   position: absolute;
   right: 0;
@@ -90,6 +118,7 @@
   letter-spacing: 2px;
   font-size: 1rem;
   font-family: tanPearl;
+  font-display: swap;
   margin: 0 10px;
   writing-mode: vertical-rl;
   color: black;

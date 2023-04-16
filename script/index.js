@@ -27,7 +27,8 @@ console.log(navbarAncre);
 
 /**** Variable Scroll ****/
 
-const containerText = document.querySelector(".container-text");
+const containerText = document.querySelector(".container-text-content");
+const containerPic = document.querySelector(".container-pic");
 
 const prestationContainer = document.querySelector(".card-container-left");
 console.log(prestationContainer);
@@ -211,5 +212,20 @@ const observer = new IntersectionObserver(
   }
 );
 
+const observerII = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.style.right = "50%";
+        entry.target.style.opacity = 1;
+      }
+    }
+  },
+  {
+    threshold: 0.5,
+  }
+);
+
 observer.observe(containerText);
 observer.observe(prestationContainer);
+observerII.observe(containerPic);

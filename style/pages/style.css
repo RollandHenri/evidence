@@ -2,6 +2,7 @@
 @font-face {
   font-family: "tanPearl";
   src: url("../font/Tan Pearl/TAN-PEARL.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "";
@@ -55,7 +56,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("/img/headerbkgd.jpg") center/cover fixed;
+  background: url("/img/headerbkgd.jpg") center/cover;
 }
 header:before {
   content: "";
@@ -172,15 +173,22 @@ nav .navbar-sociaux li img:hover {
 }
 
 .title {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 65%;
+  width: 40%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -30%);
+  background: url(/img/LOGO\ 2023-NOIR.png) center/cover fixed;
 }
-.title h1 {
-  color: whitesmoke;
-  font-size: 4rem;
-  font-family: sans-serif;
+@media screen and (max-width: 970px) {
+  .title {
+    height: 50%;
+    width: 80%;
+  }
 }
 
 /**** JS Navbar ****/
@@ -259,19 +267,21 @@ nav .navbar-sociaux li img:hover {
 }
 
 .mission-section {
-  height: 650px;
-  background: url("/img/bkgd-mission.jpg") center/cover;
+  height: 800px;
+  width: 100%;
+  background: url("/img/bkgd-mission.png") center/cover no-repeat;
+  background-position: right;
 }
 @media screen and (max-width: 970px) {
   .mission-section {
-    height: 1000px;
+    height: 800px;
   }
 }
 
 .mission-section-container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
   height: 100%;
   width: 100%;
@@ -280,73 +290,101 @@ nav .navbar-sociaux li img:hover {
   .mission-section-container {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: auto;
   }
 }
 .mission-section-container .container-text {
+  width: 50%;
+  height: 80%;
+  background: #bc7d6f;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 50%;
-  max-width: 700px;
-  height: 350px;
-  margin: 80px 0 0 100px;
-  padding: 20px 40px;
-  border-radius: 40px;
-  background: rgba(122, 129, 135, 0.4235294118);
-  transform: translateX(-100px);
-  opacity: 0;
-  transition: 1.2s ease;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 150px;
 }
 @media screen and (max-width: 970px) {
   .mission-section-container .container-text {
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    padding: 0;
+    width: 60%;
+  }
+}
+.mission-section-container .container-text .container-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 0.8s ease;
+}
+.mission-section-container .container-text .container-text-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 80px 0;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 970px) {
+  .mission-section-container .container-text .container-text-content h2 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+.mission-section-container .container-text .container-text-content p {
+  width: 350px;
+  height: 500px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 45px;
+  color: white;
+}
+@media screen and (max-width: 970px) {
+  .mission-section-container .container-text .container-text-content p {
     width: 70%;
-    margin: 50px auto;
-    padding: 15px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    line-height: 25px;
   }
 }
-.mission-section-container .container-text h2 {
-  text-align: left;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  padding: 20px 0;
+.mission-section-container .container-text .container-text-content a {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: auto;
+  color: #e4d2c8;
+  font-family: tanPearl;
 }
-@media screen and (max-width: 790px) {
-  .mission-section-container .container-text h2 {
-    font-size: 1.3rem;
-  }
-}
-.mission-section-container .container-text p {
-  text-align: left;
-  max-width: 70%;
-  font-size: 1.2rem;
-  font-weight: 550;
-  letter-spacing: 1px;
-  line-height: 30px;
-}
-@media screen and (max-width: 790px) {
-  .mission-section-container .container-text p {
-    font-size: 1rem;
+@media screen and (max-width: 970px) {
+  .mission-section-container .container-text .container-text-content a {
+    margin: 0;
+    padding: 40px 0;
   }
 }
 .mission-section-container .container-pic {
-  width: 40%;
-  max-width: 550px;
-  height: 350px;
-  min-height: 200px;
-  border-radius: 40px;
+  position: absolute;
+  width: 400px;
+  height: 550px;
+  top: 50%;
+  right: 30%;
+  transform: translate(40%, -45%);
   background: url(/img/profilpic.jpg) center/cover;
-  transform: translate(-30%, 50%);
+  opacity: 0;
+  transition: 1.2s ease-in-out;
 }
 @media screen and (max-width: 970px) {
   .mission-section-container .container-pic {
-    width: 70%;
-    margin: 0 auto;
-    transform: translate(0, 0);
+    width: 200px;
+    height: 275px;
+    transform: translate(60%, 60%);
   }
 }
 
@@ -362,6 +400,7 @@ nav .navbar-sociaux li img:hover {
   letter-spacing: 2px;
   font-size: 1rem;
   font-family: tanPearl;
+  font-display: swap;
   margin: 0 10px;
   writing-mode: vertical-rl;
   color: black;
@@ -704,6 +743,7 @@ div.avis-active {
   letter-spacing: 2px;
   font-size: 1rem;
   font-family: tanPearl;
+  font-display: swap;
   margin: 0 10px;
   writing-mode: vertical-rl;
   color: black;
