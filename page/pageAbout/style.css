@@ -28,8 +28,19 @@ header {
     height: 80px;
 }
 
+header:before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    top: 0;
+    animation: headerLoading 1s ease-in forwards;
+}
+
 header .logo-menu {
    display: none;
+   position: fixed;
    transition: 0.5s ease;
 }
 
@@ -38,10 +49,6 @@ header .logo-menu img {
     width: 50px;
     height: 50px;
 }
-
-
-
-
 
 .navbar {
     position: fixed;
@@ -130,7 +137,6 @@ header .logo-menu img {
  .about-container-pic {
     width: 50%;
     height: 500px;
-
     margin: 60px auto;
  }
 
@@ -222,29 +228,56 @@ header .logo-menu img {
 /**** Media Query ****/ 
 
 @media screen and (max-width: 970px) {
+
+
     header .logo-menu {
         transition: 0.5s ease;
         display: block;
-         position: absolute;
+         position: fixed;
          top: 40px;
          left: 40px;
          z-index: 6;
        
      }
+
+     .about {
+        height: 1800px;
+     }
+
+   
+     .about-container-pic {
+        width: 75%;
+        height: 300px;
+     }
  }
 
+ /**** KeyFrame ****/
+
+ @keyframes headerLoading {
+    from {
+      opacity: 100%;
+      z-index: 100;
+    }
+    to {
+      z-index: -1;
+      opacity: 0%;
+      background: transparent;
+    }
+  }
 
  /**** Js NavBar Mobile ****/ 
 
  .navbar-mobile {
+   position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     transform: translateX(-100%);
     opacity: 0.2;
-    z-index: 2;
+    z-index: 1;
     transition: 0.8s ease-in-out;
  }
 
