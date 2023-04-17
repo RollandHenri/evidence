@@ -21,7 +21,7 @@ window.addEventListener("resize", () => {
 /**** Variables NavBar ****/
 
 const navBar = document.querySelector(".navbar");
-const logoMenu = document.querySelector(".logo-menu");
+const logoMenu = document.querySelectorAll(".logo-menu");
 const navbarAncre = document.querySelectorAll("li");
 console.log(navbarAncre);
 
@@ -184,6 +184,7 @@ window.addEventListener("scroll", () => {
 
 logoMenu.addEventListener("click", () => {
   if (window.innerWidth < 972) {
+    console.log("coucoucoucoucou");
     navBar.classList.toggle("navbar-mobile-toggle");
   }
 });

@@ -1,0 +1,135 @@
+.logo-menu {
+  display: none;
+  @include tablette {
+    display: block;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 6;
+    & img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.about {
+  position: relative;
+  & .about-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1100px;
+    background: white;
+    @include tablette {
+      height: auto;
+    }
+    & .about-title-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      @include tablette {
+        height: 400px;
+      }
+      & .about-picture {
+        width: 100%;
+        height: 800px;
+        background: url("/img/bkgdPrestations.webp") center/cover;
+        background-position: top;
+        @include tablette {
+          height: 450px;
+          background-position-y: -30px;
+        }
+      }
+    }
+  }
+
+  & .about-para-pic {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 800px;
+    max-width: 50%;
+    min-height: 800px;
+    margin-bottom: 200px;
+    background-color: white;
+    transform: translateY(-150px);
+    @include tablette {
+      height: auto;
+    }
+
+    & .about-para-pic-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      padding: 30px;
+      @include tablette {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        transform: translateY(-150px);
+      }
+      & .about-pic {
+        width: 50%;
+        height: 100%;
+        background: url("/img/pageAbout/about-pic.jpg") center/cover;
+        @include tablette {
+          height: 300px;
+          width: 40%;
+          border: 8px solid white;
+          z-index: 2;
+        }
+      }
+      & .about-para {
+        width: 50%;
+        height: 100%;
+        background: $color5;
+        text-align: center;
+        @include tablette {
+          transform: translateY(-50px);
+          height: auto;
+        }
+        & h3 {
+          padding: 30px 0;
+          text-transform: uppercase;
+          font-family: tanPearl;
+          @include tablette {
+            padding-top: 90px;
+          }
+        }
+        & p {
+          padding: 30px 30px;
+          font-size: 1.2rem;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 80px;
+
+  & .footer-sociaux {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+  }
+  & img {
+    width: 40px;
+    height: 40px;
+  }
+}

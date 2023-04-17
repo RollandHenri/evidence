@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="/style/pages/style.css" />
     <title>A propos de moi</title>
   </head>
   <body>
-    <header>
+    <header id="about-page">
       <div class="logo-menu">
         <img src="/img/icon/menu.webp" alt="menu logo" />
       </div>
+
       <nav class="navbar">
         <ul class="navbar-menu">
           <li id="logo-navbar">
-            <img src="/img/logo.webp" alt="logo Comme une évidence" />
+            <img src="/img/logo-2023-noir.webp" alt="logo Comme une évidence" />
           </li>
           <li><a href="/index.html#accueil">Accueil</a></li>
           <li><a href="/index.html#about">A propos</a></li>
@@ -36,36 +37,34 @@
     </header>
 
     <section class="about">
-      <div class="about-container">
-        <div class="about-container-pic">
-          <div class="title">
-            <h2>A propos de Moi</h2>
-          </div>
-          <div class="pic"></div>
+      <div class="about-title-container">
+        <div class="about-title-content">
+          <div class="about-picture"></div>
         </div>
-        <div class="about-container-para">
-          <p>
-            Esthéticienne diplômée depuis 2007, les soins du corps m’ont
-            toujours paru être « Comme une évidence ». Une formation à l’école
-            Azendaye, N°1 du Bien-être en France, a enrichi mes connaissances de
-            la culture du massage, ses origines et protocoles traditionnels.<br />
-            <br />
-            Dès lors que l’on décide de prendre soin de soi, un alignement
-            intérieur indispensable à notre santé physique, psychique et
-            émotionnelle se manifeste.<br />
-            <br />
-            Sans cesse à la recherche de nouvelles connaissances et compétences,
-            je me forme régulièrement à des techniques différentes.<br />
-            <br />
-            En parallèle, j’ai développé une capacité énergétique qui
-            approfondit le soin, me permettant de prendre en charge votre être
-            dans sa globalité (dimension holistique).<br />
-            <br />
-            Le bien-être est un état d’esprit qui me guide au quotidien. J’ai à
-            cœur de vous le partager avec bonté, bienveillance et passion.
-            <br />
-            <br /><span>Au plaisir, <strong>Aurélie</strong></span>
-          </p>
+        <div class="about-para-pic">
+          <div class="about-para-pic-content">
+            <div class="about-pic"></div>
+            <div class="about-para">
+              <h3>A propos de Moi</h3>
+              <p>
+                Esthéticienne diplômée depuis 2007, les soins du corps m’ont
+                toujours paru être « Comme une évidence ». Une formation à
+                l’école Azendaye, N°1 du Bien-être en France, a enrichi mes
+                connaissances de la culture du massage, ses origines et
+                protocoles traditionnels. Dès lors que l’on décide de prendre
+                soin de soi, un alignement intérieur indispensable à notre santé
+                physique, psychique et émotionnelle se manifeste. Sans cesse à
+                la recherche de nouvelles connaissances et compétences, je me
+                forme régulièrement à des techniques différentes. En parallèle,
+                j’ai développé une capacité énergétique qui approfondit le soin,
+                me permettant de prendre en charge votre être dans sa globalité
+                (dimension holistique). Le bien-être est un état d’esprit qui me
+                guide au quotidien. J’ai à cœur de vous le partager avec bonté,
+                bienveillance et passion. <br />
+                <br />Au plaisir, Aurélie
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -89,6 +88,25 @@
       </ul>
     </footer>
 
-    <script src="index2.js"></script>
+    <script src="/script/index.js"></script>
+    <script>
+      const logoMenu2 = document.querySelector(".logo-menu");
+      console.log(logoMenu);
+
+      logoMenu2.addEventListener("click", () => {
+        if (window.innerWidth < 972) {
+          console.log("coucoucoucoucou");
+          navBar.classList.toggle("navbar-mobile-toggle");
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.innerWidth > 972 && window.scrollY > 100) {
+          navBar.classList.add("navbar-anim");
+        } else {
+          navBar.classList.remove("navbar-anim");
+        }
+      });
+    </script>
   </body>
 </html>

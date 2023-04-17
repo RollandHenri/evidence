@@ -18,6 +18,12 @@
     width: 80%;
     height: 80%;
     border-radius: 25px;
+    @include tablette {
+      text-align: center;
+      width: 95%;
+      height: 85%;
+      font-size: 0.8rem;
+    }
   }
   & .carrousel,
   .carrousel-avis {
@@ -33,6 +39,7 @@
     @include tablette {
       height: 80%;
       width: 90%;
+      padding: 10px;
     }
     & strong {
       color: $color4;
@@ -50,6 +57,7 @@
 .slider div,
 .slider-avis div {
   max-width: 100%;
+  padding: 0 15px;
   display: none;
 }
 
