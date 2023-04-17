@@ -154,7 +154,7 @@ header .logo-menu img {
     height: 80%;
     border-radius: 40px;
     filter: drop-shadow(2px 2px 15px black);
-    background: url(/img/profilpic.jpg) center/cover; 
+    background: url('/img/profilpic.webp') center/cover; 
  }
 
  .about-container-para {

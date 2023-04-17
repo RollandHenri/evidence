@@ -51,6 +51,31 @@ $color5: #bc7d6f;
   }
 }
 
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 350px;
+  }
+  100% {
+    background-position: 700px;
+  }
+}
+
+@keyframes shineTablette {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    background-position: 250px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
 /***** Media Query ****/
 
 @mixin tablette {

@@ -6,16 +6,6 @@
   @include tablette {
     height: auto;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: -10px;
-    background: $color4;
-    filter: blur(5px);
-    width: 105%;
-    height: 40px;
-  }
 }
 
 .evenement-container {

@@ -212,20 +212,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-const observerII = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.style.right = "50%";
-        entry.target.style.opacity = 1;
-      }
-    }
-  },
-  {
-    threshold: 0.5,
-  }
-);
-
 observer.observe(containerText);
 observer.observe(prestationContainer);
-observerII.observe(containerPic);
+observer.observe(containerPic);
