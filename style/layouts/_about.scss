@@ -15,6 +15,15 @@
 
 .about {
   position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    z-index: 4;
+    animation: otherPageAnim 2s ease-in-out forwards;
+  }
   & .about-title-container {
     display: flex;
     flex-direction: column;

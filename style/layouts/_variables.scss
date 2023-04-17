@@ -84,6 +84,18 @@ $color5: #bc7d6f;
   }
 }
 
+@keyframes otherPageAnim {
+  from {
+    opacity: 100%;
+    z-index: 100;
+  }
+  to {
+    z-index: -1;
+    opacity: 0%;
+    background: transparent;
+  }
+}
+
 /***** Media Query ****/
 
 @mixin tablette {

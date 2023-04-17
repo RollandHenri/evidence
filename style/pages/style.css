@@ -67,6 +67,17 @@
     background-position: 350px;
   }
 }
+@keyframes otherPageAnim {
+  from {
+    opacity: 100%;
+    z-index: 100;
+  }
+  to {
+    z-index: -1;
+    opacity: 0%;
+    background: transparent;
+  }
+}
 /***** Media Query ****/
 * {
   box-sizing: border-box;
@@ -1126,6 +1137,15 @@ footer img {
 
 .about {
   position: relative;
+}
+.about:before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  z-index: 4;
+  animation: otherPageAnim 2s ease-in-out forwards;
 }
 .about .about-title-container {
   display: flex;
