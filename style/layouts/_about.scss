@@ -49,10 +49,12 @@
         width: 100%;
         height: 800px;
         background: url("/img/bkgdPrestations.webp") center/cover;
-        background-position: top;
+        background-position-y: 90px;
         @include tablette {
           height: 450px;
-          background-position-y: -30px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-y: -20px;
         }
       }
     }
@@ -71,6 +73,7 @@
     transform: translateY(-150px);
     @include tablette {
       height: auto;
+      background: transparent;
     }
 
     & .about-para-pic-content {
@@ -85,7 +88,7 @@
         align-items: center;
         width: 90%;
         height: 100%;
-        transform: translateY(-150px);
+        transform: translateY(-40px);
       }
       & .about-pic {
         width: 50%;
@@ -104,8 +107,10 @@
         background: $color5;
         text-align: center;
         @include tablette {
-          transform: translateY(-50px);
+          transform: translateY(-161px);
           height: auto;
+          width: 60%;
+          padding: 15px;
         }
         & h3 {
           padding: 30px 0;

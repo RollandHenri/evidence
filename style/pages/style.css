@@ -1178,12 +1178,14 @@ footer img {
   width: 100%;
   height: 800px;
   background: url("/img/bkgdPrestations.webp") center/cover;
-  background-position: top;
+  background-position-y: 90px;
 }
 @media screen and (max-width: 970px) {
   .about .about-title-container .about-title-content .about-picture {
     height: 450px;
-    background-position-y: -30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -20px;
   }
 }
 .about .about-para-pic {
@@ -1201,6 +1203,7 @@ footer img {
 @media screen and (max-width: 970px) {
   .about .about-para-pic {
     height: auto;
+    background: transparent;
   }
 }
 .about .about-para-pic .about-para-pic-content {
@@ -1217,7 +1220,7 @@ footer img {
     align-items: center;
     width: 90%;
     height: 100%;
-    transform: translateY(-150px);
+    transform: translateY(-40px);
   }
 }
 .about .about-para-pic .about-para-pic-content .about-pic {
@@ -1241,8 +1244,10 @@ footer img {
 }
 @media screen and (max-width: 970px) {
   .about .about-para-pic .about-para-pic-content .about-para {
-    transform: translateY(-50px);
+    transform: translateY(-161px);
     height: auto;
+    width: 60%;
+    padding: 15px;
   }
 }
 .about .about-para-pic .about-para-pic-content .about-para h3 {
