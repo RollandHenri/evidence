@@ -96,6 +96,18 @@ $color5: #bc7d6f;
   }
 }
 
+@keyframes cardHover {
+  0% {
+    opacity: 0%;
+    height: 0px;
+  }
+
+  100% {
+    opacity: 100%;
+    height: 440px;
+  }
+}
+
 /***** Media Query ****/
 
 @mixin tablette {

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/pages/style.css" />
+    <title>Massages</title>
+  </head>
+  <body>
+    <header id="massage-page">
+      <div class="logo-menu">
+        <img src="/img/icon/menu.webp" alt="menu logo" />
+      </div>
+
+      <nav class="navbar">
+        <ul class="navbar-menu">
+          <li id="logo-navbar">
+            <img src="/img/logo-2023-noir.webp" alt="logo Comme une évidence" />
+          </li>
+          <li><a href="/index.html#accueil">Accueil</a></li>
+          <li><a href="/index.html#about">A propos</a></li>
+          <li><a href="/index.html#prestations">Préstations </a></li>
+          <li><a href="/index.html#footer">Contact</a></li>
+        </ul>
+
+        <ul class="navbar-sociaux">
+          <li><img src="/img/icon/facebook.webp" alt="facebook" /></li>
+          <li><img src="/img/icon/instagram.webp" alt="instagram" /></li>
+          <li>
+            <a href="mailto:a.commeuneevidence@gmail.com"
+              ><img src="/img/icon/mail.webp" alt="Email"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title-container">
+      <h1>Massages</h1>
+    </div>
+
+    <script src="/script/index.js"></script>
+    <script>
+      const logoMenu2 = document.querySelector(".logo-menu");
+      console.log(logoMenu);
+
+      logoMenu2.addEventListener("click", () => {
+        if (window.innerWidth < 972) {
+          navBar.classList.toggle("navbar-mobile-toggle");
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        if (window.innerWidth > 972 && window.scrollY > 100) {
+          navBar.classList.add("navbar-anim");
+        } else {
+          navBar.classList.remove("navbar-anim");
+        }
+      });
+    </script>
+  </body>
+</html>

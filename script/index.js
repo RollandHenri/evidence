@@ -31,7 +31,9 @@ const containerText = document.querySelector(".container-text-content");
 const containerPic = document.querySelector(".container-pic");
 
 const prestationContainer = document.querySelector(".card-container-left");
-console.log(prestationContainer);
+const evenementCard = document.querySelector(".container-card-event");
+const eventDynamique = document.querySelector(".main-event");
+console.log(evenementCard);
 
 /**** Variables Services ****/
 
@@ -215,3 +217,5 @@ const observer = new IntersectionObserver(
 observer.observe(containerText);
 observer.observe(prestationContainer);
 observer.observe(containerPic);
+observer.observe(evenementCard);
+observer.observe(eventDynamique);

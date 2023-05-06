@@ -1,8 +1,8 @@
 .evenement-section {
   position: relative;
   width: 100%;
-  height: 600px;
-  margin-bottom: 150px;
+  height: auto;
+  background: url("../../img/evenement-bkgd.webp") center/cover;
   @include tablette {
     height: auto;
   }
@@ -17,45 +17,130 @@
   width: 100%;
 
   & .container-title {
-    text-align: center;
+    position: relative;
     width: 100%;
-    margin: 50px auto;
-  }
-  & .container-list {
-    width: 100%;
-    height: 90%;
+    height: 15%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    font-size: 1.8rem;
+    color: $color2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include tablette {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20%;
+      height: 1px;
+      background: $color1;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include prestaWidth {
+        bottom: -40px;
+      }
+    }
+  }
+  & .main-event {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 0 auto;
-    @include tablette {
-      height: auto;
-      flex-direction: column;
-      justify-content: space-around;
+    width: 70%;
+    height: 250px;
+    margin-top: 80px;
+    border: 2px solid $color5;
+    border-radius: 3rem;
+    filter: drop-shadow(2px 2px 15px white);
+    background-color: red;
+    transform: translateX(-250px);
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    & h5 {
+      font-size: 1.7rem;
+      letter-spacing: 3px;
+      font-family: tanPearl;
+      color: white;
+      text-shadow: 8px 8px 8px $color5;
     }
-    & .list {
+  }
+}
+
+.container-card-event {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  margin: 20px auto;
+  opacity: 0;
+  transition: 1.2s ease;
+  @include tablette {
+    flex-direction: column;
+    height: auto;
+  }
+  & .card-face {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 380px;
+    min-width: 300px;
+    height: 500px;
+    border: 2px solid $color5;
+    border-radius: 3rem;
+    filter: drop-shadow(2px 2px 15px white);
+    background: green;
+    @include tablette {
+      width: 260px;
+      height: 460px;
+      margin: 50px auto;
+    }
+    & h5 {
+      position: absolute;
+      font-size: 1.7rem;
+      letter-spacing: 3px;
+      font-family: tanPearl;
+      color: white;
+      text-shadow: 8px 8px 8px $color5;
+    }
+    & .card-face-hidden {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
-      width: 300px;
-      height: 300px;
-      border-radius: 25px;
-      background-color: red;
+      width: 330px;
+      height: 480px;
+      opacity: 1;
+      transition: 0.4s ease;
       @include tablette {
-        width: 250px;
-        height: 250px;
-        margin: 30px 0;
+        width: 260px;
+        height: 440px;
       }
-      & .list-1,
-      .list-2,
-      .list-3 {
-        width: 250px;
-        height: 250px;
-        background: rgba(255, 255, 255, 0.705);
-        @include tablette {
-          width: 200px;
-          height: 200px;
+      & p {
+        opacity: 0;
+      }
+      &:hover > .card-face-hidden-hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 270px;
+        height: 0px;
+        background-color: $color4;
+        border-radius: 2rem;
+        opacity: 1;
+        animation: cardHover 1s ease forwards;
+
+        & p {
+          opacity: 1;
         }
       }
     }
